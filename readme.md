@@ -1,11 +1,12 @@
-﻿# Notes for lecture
+﻿# Code performance & benchmarking
+Project with exercises on code optimization and BenchmarkDotNet.
 
 ## Sources
 - BenchmarkDotNet git repo https://github.com/dotnet/BenchmarkDotNet
 - BenchmarkDotNet home https://benchmarkdotnet.org/
 - .NET blog performance articles https://devblogs.microsoft.com/dotnet/?s=performance&submit=%EE%9C%A1
 
-## Demo
+## Notes for the lecture
 1. `Program.cs`, benchmark runner, Release, without debug (CTRL+F5), HashBenchmark
 2. `StringBenchmark` What is faster? String concatenation or string builder?
 3. `SubBufferBenchmarks` Keep performace in mind when dealing with large arrays. 
