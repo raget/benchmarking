@@ -8,7 +8,7 @@ namespace Benchmarking
     public class StructVsClass
     {
         [Params(128, 256)] 
-        public static int length;
+        public static int Length;
 
         private PointStruct[] pointStructs;
         private PointClass[] pointClasses;
@@ -16,10 +16,10 @@ namespace Benchmarking
         [GlobalSetup]
         public void Setup()
         {
-            pointStructs = new PointStruct[length];
-            pointClasses = new PointClass[length];
+            pointStructs = new PointStruct[Length];
+            pointClasses = new PointClass[Length];
 
-            for (int i = 0; i < length; i++)
+            for (int i = 0; i < Length; i++)
             {
                 pointClasses[i] = new PointClass();
             }
@@ -28,7 +28,7 @@ namespace Benchmarking
         [Benchmark]
         public void FillStructs()
         {
-            for (int i = 0; i < length; i++)
+            for (int i = 0; i < Length; i++)
             {
                 pointStructs[i].X = 1;
                 pointStructs[i].Y = 1;
@@ -38,7 +38,7 @@ namespace Benchmarking
         [Benchmark]
         public void FillClasses()
         {
-            for (int i = 0; i < length; i++)
+            for (int i = 0; i < Length; i++)
             {
                 pointClasses[i].X = 1;
                 pointClasses[i].Y = 1;
